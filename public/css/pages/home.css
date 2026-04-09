@@ -1,0 +1,188 @@
+/* 🍕 HERO CAROUSEL */
+.hero-carousel {
+    width: 100%;
+    max-width: 1920px;
+    height: 600px; /* Ukuran proporsional 1080p di layar desktop */
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    background: #eaeff2;
+}
+
+.carousel-container {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-content {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    max-width: 500px;
+    color: #2c3437;
+    z-index: 2;
+}
+
+.badge {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 800;
+    color: #0060ad;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.slide-content h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.highlight { color: #0060ad; }
+
+.btn-primary {
+    background: #0060ad;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* 🏷️ FILTER BAR */
+.filter-bar {
+    background: #f0f4f7;
+    padding: 20px 0;
+    position: sticky;
+    top: 70px;
+    z-index: 10;
+}
+
+.filter-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cat-btn {
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: none;
+    background: white;
+    color: #596064;
+    margin-right: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.cat-btn.active {
+    background: #0060ad;
+    color: white;
+}
+
+/* 🛒 PRODUCT CATALOG */
+.product-catalog {
+    padding: 80px 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    transition: 0.3s;
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+.image-wrapper {
+    margin-top: -60px; /* Efek melayang di gambar */
+    height: 200px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.category-tag {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #94a3b8;
+    font-weight: 800;
+}
+
+.product-info h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.product-info p {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #0060ad;
+}
+
+.add-to-cart {
+    background: #eaeff2;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-to-cart:hover {
+    background: #0060ad;
+    color: white;
+}

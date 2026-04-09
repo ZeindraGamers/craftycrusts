@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title><%= title || "CraftyCrusts" %></title>
+
+    <!-- 🔥 Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- 🔥 Layout CSS -->
+    <link rel="stylesheet" href="/css/layout.css">
+
+    <!-- 🔥 Page CSS -->
+<% if (locals.pageCSS) { %>
+    <link rel="stylesheet" href="/css/pages/<%= pageCSS %>.css">
+<% } %>
+</head>
+
+<body>
+
+    <!-- 🔥 NAVBAR -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">CraftyCrusts</div>
+
+            <div class="nav-right">
+                <input type="text" placeholder="Search..." class="search">
+                <div class="profile">👤</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 🔥 MAIN -->
+    <main class="main-content">
+        <div class="container">
+            <%- body %>
+        </div>
+    </main>
+
+    <!-- 🔥 FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>CraftyCrusts</h3>
+
+            <div class="footer-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Contact</a>
+            </div>
+
+            <p>© 2026 CraftyCrusts</p>
+        </div>
+    </footer>
+
+    <!-- 🔥 JS GLOBAL -->
+    <script src="/js/global.js"></script>
+
+    <!-- 🔥 JS PER PAGE -->
+    <% if (pageJS) { %>
+        <script src="/js/<%= pageJS %>.js"></script>
+    <% } %>
+
+</body>
+</html>
