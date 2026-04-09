@@ -2,13 +2,11 @@ const mysql = require("mysql2/promise");
 const dotenv = require("dotenv");
 dotenv.config();
 
-const databaseName = "craftyCrustsDB";
-
 const pool = mysql.createPool({
   host: process.env.DB_HOST || "localhost",
   user: process.env.DB_USER || "root",
   password: process.env.DB_PASSWORD || "",
-  port: process.env.DB_PORT
+  port: process.env.DB_PORT,
   database: process.env.DB_NAME,
   waitForConnections: true,
   connectionLimit: 10,
@@ -22,9 +20,6 @@ const initDB = async () => {
       password: process.env.DB_PASSWORD || "",
     });
 
-    await connection.query(
-      `CREATE DATABASE IF NOT EXISTS \`${databaseName}\``
-    );
     console.log(`✅ Database '${databaseName}' ready!`);
 
     await connection.end();
